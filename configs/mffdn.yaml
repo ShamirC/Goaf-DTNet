@@ -1,0 +1,26 @@
+MODEL:
+  NAME: "MFFDN"
+  PRETRAINED: False
+  ASPP: True
+  SGFM: True
+  MFFM: False
+
+DATA:
+  DATA_LIST_TRAIN: r"E:\cxm\Crack\GoafCrackData\shenyuan_kq6_train.txt"
+  DATA_LIST_VAL: r"E:\cxm\Crack\GoafCrackData\shenyuan_kq6_valid.txt"
+
+TRAIN:
+  BATCH_SIZE: 8
+  EXP_NUM: 1
+  SCHEDULER: "multi_step"
+  LR: 1e-4
+  EPOCH: 150
+  LOSS: "Focal"
+  RESUME: False
+
+
+LOGGER:
+  NAME: "MFFDN_log"
+
+SAVE:
+  LOG_EXP: './logs/MFFDN/mffdn_aspp_2'
